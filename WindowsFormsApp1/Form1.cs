@@ -200,5 +200,11 @@ namespace WindowsFormsApp1
             adapter.Fill(table);
             MessageBox.Show("Данные изменены, я спать!");
         }
+
+        private void button3_Click(object sender, EventArgs e) // для диаграммы 
+        {
+            chart1.Series[0].Points.AddXY(Convert.ToDouble(textBox6.Text), Convert.ToDouble(textBox7.Text));
+        }
+        List<string[]> data2 = new List<string[]>();
     }
 }
